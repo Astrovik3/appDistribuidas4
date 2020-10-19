@@ -16,6 +16,12 @@
         android:id="@+id/txtMessage"/>
 
     <Button
+        android:id="@+id/window1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/BttnWindow" />
+
+    <Button
         android:id="@+id/btnCamera"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

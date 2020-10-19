@@ -13,6 +13,7 @@ public class MainPageActivity extends AppCompatActivity {
 
     private TextView txtMessage;
     private Button btnCamera;
+    private Button newWindow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,16 @@ public class MainPageActivity extends AppCompatActivity {
                 Intent i = new Intent(MainPageActivity.this, CameraActivity.class);
                 //i.putExtra("nombre",nombre);
                 startActivity(i);
+            }
+        });
+
+        newWindow = findViewById(R.id.window1);
+        newWindow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Intent: un vinculo entre actividades, origen -> destino
+                Intent j = new Intent(MainPageActivity.this, ClaimsActivity.class);
+                startActivity(j);
             }
         });
 

@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">appDistribuidas</string>
+
+    <string name="TVEdificio">Edificio:</string>
+    <string name="TVPiso">Piso:</string>
+    <string name="TVNumero">Número:</string>
+    <string name="TVRubro">Rubro:</string>
+    <string name="TVTitulo">Título:</string>
+    <string name="TVFotos">Fotos:</string>
+
+    <string name="ATEdificio">Edificio X</string>
+    <string name="ATPiso">Piso Y</string>
+    <string name="ATNumero">Número Z</string>
+    <string name="ATRubro">Rubro W</string>
+    <string name="ATTitulo">Título bla bla</string>
+
+    <string name="PTDescripcion">Descripción del problema...</string>
+    <string name="BttnWindow">Window 1</string>
+
 </resources>
