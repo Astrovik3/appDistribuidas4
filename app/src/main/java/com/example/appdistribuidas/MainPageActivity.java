@@ -1,25 +1,50 @@
 
 package com.example.appdistribuidas;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Adapter;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.SimpleAdapter;
 import android.widget.TextView;
+
+import java.lang.reflect.Array;
 
 public class MainPageActivity extends AppCompatActivity {
 
-    private TextView txtMessage;
-    private Button btnCamera;
-    private Button newWindow;
+    RecyclerView listReclamosPropios;
+    String[] claims;
+    String[] dates;
+    String[] states;
+    Button btnCamera;
+    Button newWindow;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_page);
-        txtMessage = findViewById(R.id.txtMessage);
+
+        Resources res = getResources();
+        listReclamosPropios = (RecyclerView) findViewById(R.id.listReclamosPropios);
+        claims = res.getStringArray(R.array.claims);
+        dates = res.getStringArray(R.array.dates);
+        states = res.getStringArray(R.array.states);
+
+        MyAdapter myAdapter = new MyAdapter(this, claims, dates, states);
+        listReclamosPropios.setAdapter(myAdapter);
+        listReclamosPropios.setLayoutManager(new LinearLayoutManager(this));
+
+
         btnCamera = findViewById(R.id.btnCamera);
         btnCamera.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,8 +67,7 @@ public class MainPageActivity extends AppCompatActivity {
             }
         });
 
-        String nombre = getIntent().getStringExtra("nombre");
-        txtMessage.setText("Bienvenido "+ nombre);
+
     }
 
 
