@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="@+id/PlainTextDescripcion"
+        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        app:srcCompat="@android:drawable/ic_menu_gallery" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView5"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        app:srcCompat="@android:drawable/ic_menu_gallery" />
+
+    <AutoCompleteTextView
+        android:id="@+id/AutoTextEdificio"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="@string/ATEdificio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.626"
+        app:layout_constraintStart_toEndOf="@+id/TextViewEdificio"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <AutoCompleteTextView
+        android:id="@+id/AutoTextPiso"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:text="@string/ATPiso"
+        app:layout_constraintBottom_toTopOf="@+id/AutoTextNumero"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/AutoTextEdificio"
+        app:layout_constraintTop_toBottomOf="@+id/AutoTextEdificio" />
+
+    <AutoCompleteTextView
+        android:id="@+id/AutoTextNumero"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/ATNumero"
+        app:layout_constraintBottom_toBottomOf="@+id/TextViewNumero"
+        app:layout_constraintStart_toStartOf="@+id/AutoTextPiso" />
+
+    <TextView
+        android:id="@+id/TextViewEdificio"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="64dp"
+        android:gravity="center"
+        android:text="@string/TVEdificio"
+        android:textColor="@android:color/background_dark"
+        android:textColorHint="@android:color/background_dark"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TextViewPiso"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:text="@string/TVPiso"
+        android:textColor="@android:color/background_dark"
+        android:textColorHint="@android:color/background_dark"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/TextViewNumero"
+        app:layout_constraintEnd_toEndOf="@+id/TextViewEdificio"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewEdificio" />
+
+    <TextView
+        android:id="@+id/TextViewNumero"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="468dp"
+        android:gravity="center"
+        android:text="@string/TVNumero"
+        android:textColor="@android:color/background_dark"
+        android:textColorHint="@android:color/background_dark"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/TextViewPiso" />
+
+    <TextView
+        android:id="@+id/TextViewRubro"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="@string/TVRubro"
+        android:textColor="@android:color/background_dark"
+        android:textColorHint="@android:color/background_dark"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/TextViewNumero"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewNumero" />
+
+    <TextView
+        android:id="@+id/TextViewTitulo"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="@string/TVTitulo"
+        android:textColor="@android:color/background_dark"
+        android:textColorHint="@android:color/background_dark"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/TextViewRubro"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewRubro" />
+
+    <AutoCompleteTextView
+        android:id="@+id/AutoTextTitulo"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/ATTitulo"
+        app:layout_constraintStart_toStartOf="@+id/AutoTextRubro"
+        app:layout_constraintTop_toBottomOf="@+id/AutoTextRubro" />
+
+    <AutoCompleteTextView
+        android:id="@+id/AutoTextRubro"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/ATRubro"
+        app:layout_constraintStart_toStartOf="@+id/AutoTextNumero"
+        app:layout_constraintTop_toBottomOf="@+id/AutoTextNumero" />
+
+    <EditText
+        android:id="@+id/PlainTextDescripcion"
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="12dp"
+        android:background="@android:color/darker_gray"
+        android:ems="10"
+        android:gravity="top"
+        android:inputType="textPersonName"
+        android:singleLine="false"
+        android:text="@string/PTDescripcion"
+        android:textColor="@android:color/background_dark"
+        android:textColorHint="@android:color/background_dark"
+        app:layout_constraintStart_toStartOf="@+id/TextViewTitulo"
+        app:layout_constraintTop_toBottomOf="@+id/AutoTextTitulo" />
+
+    <TextView
+        android:id="@+id/TextViewFotos"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="@string/TVFotos"
+        android:textColor="@android:color/background_dark"
+        android:textColorHint="@android:color/background_dark"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/PlainTextDescripcion"
+        app:layout_constraintTop_toBottomOf="@+id/PlainTextDescripcion" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewFotos"
+        app:srcCompat="@android:drawable/ic_menu_gallery" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        android:clickable="false"
+        app:layout_constraintBottom_toTopOf="@+id/AutoTextTitulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AutoTextRubro" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
