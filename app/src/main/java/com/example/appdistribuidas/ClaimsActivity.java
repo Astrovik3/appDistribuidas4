@@ -8,6 +8,7 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+
 public class ClaimsActivity extends AppCompatActivity {
 
     private ImageView img1Camera;
