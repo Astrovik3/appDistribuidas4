@@ -8,11 +8,17 @@
         <item>Claim 4</item>
         <item>Claim 5</item>
         <item>Claim 6</item>
+        <item>Claim 7</item>
+        <item>Claim 8</item>
+        <item>Claim 9</item>
     </string-array>
     <string-array name="dates">
         <item>20/10/2020</item>
         <item>17/10/2020</item>
         <item>06/05/2020</item>
+        <item>29/11/2019</item>
+        <item>03/07/2019</item>
+        <item>14/02/2019</item>
         <item>29/11/2019</item>
         <item>03/07/2019</item>
         <item>14/02/2019</item>
@@ -24,6 +30,9 @@
         <item>Solved</item>
         <item>Waiting</item>
         <item>Solved</item>
+        <item>Cancelled</item>
+        <item>Cancelled</item>
+        <item>Cancelled</item>
     </string-array>
 
     <string name="TVEdificio">Edificio:</string>
