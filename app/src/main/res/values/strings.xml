@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Nombre de la App</string>
+    <string name="app_name">App edificios</string>
 
     <string-array name="claims">
         <item>Claim 1</item>

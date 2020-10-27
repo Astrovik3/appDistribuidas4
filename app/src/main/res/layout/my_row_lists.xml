@@ -27,9 +27,11 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="185dp"
                 android:text="TextView"
+                android:textAlignment="gravity"
                 android:textSize="24sp"
                 app:layout_constraintBottom_toTopOf="@+id/textView4"
                 app:layout_constraintEnd_toStartOf="@+id/textView5"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -51,6 +53,7 @@
                 android:layout_marginBottom="24dp"
                 android:text="TextView"
                 android:textSize="24sp"
+                android:textAlignment="gravity"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
