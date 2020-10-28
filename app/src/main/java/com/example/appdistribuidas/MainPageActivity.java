@@ -1,33 +1,21 @@
-
 package com.example.appdistribuidas;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Adapter;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.SimpleAdapter;
-import android.widget.TextView;
-
-import java.lang.reflect.Array;
 
 public class MainPageActivity extends AppCompatActivity {
-
     RecyclerView listReclamosPropios;
     String[] claims;
     String[] dates;
     String[] states;
     Button btnCamera;
     Button newWindow;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +37,6 @@ public class MainPageActivity extends AppCompatActivity {
         btnCamera.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 // Intent: un vinculo entre actividades, origen -> destino
                 Intent i = new Intent(MainPageActivity.this, CameraActivity.class);
                 //i.putExtra("nombre",nombre);

@@ -10,8 +10,9 @@ import android.widget.EditText;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private Button btnAccept;
-    private EditText txtUser;
+    Button btnAccept;
+    EditText txtUser;
+    Button btnOlvidoPass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,18 +20,26 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         btnAccept = findViewById(R.id.btnAccept);
         txtUser = findViewById(R.id.txtUser);
+        btnOlvidoPass = findViewById(R.id.btnOlvidoPassword);
 
         btnAccept.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String name = txtUser.getText().toString();
-
                 if(name.isEmpty())
                     name = "Extraño";
 
                 // Intent: un vinculo entre actividades, origen -> destino
                 Intent i = new Intent(LoginActivity.this, MainPageActivity.class);
                 i.putExtra("name",name);
+                startActivity(i);
+            }
+        });
+
+        btnOlvidoPass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View w) {
+                Intent i = new Intent(LoginActivity.this, RecuperoPasswordActivity.class);
                 startActivity(i);
             }
         });
