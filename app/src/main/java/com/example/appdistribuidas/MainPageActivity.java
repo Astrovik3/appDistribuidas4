@@ -14,7 +14,7 @@ public class MainPageActivity extends AppCompatActivity {
     String[] claims;
     String[] dates;
     String[] states;
-    Button btnCamera;
+    Button btnReclamosEdif;
     Button newWindow;
 
     @Override
@@ -33,12 +33,12 @@ public class MainPageActivity extends AppCompatActivity {
         listReclamosPropios.setLayoutManager(new LinearLayoutManager(this));
 
 
-        btnCamera = findViewById(R.id.btnCamera);
-        btnCamera.setOnClickListener(new View.OnClickListener() {
+        btnReclamosEdif = findViewById(R.id.btnClaimsEdif);
+        btnReclamosEdif.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Intent: un vinculo entre actividades, origen -> destino
-                Intent i = new Intent(MainPageActivity.this, CameraActivity.class);
+                Intent i = new Intent(MainPageActivity.this, EdifClaimsActivity.class);
                 //i.putExtra("nombre",nombre);
                 startActivity(i);
             }
@@ -48,7 +48,6 @@ public class MainPageActivity extends AppCompatActivity {
         newWindow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Intent: un vinculo entre actividades, origen -> destino
                 Intent j = new Intent(MainPageActivity.this, ClaimsActivity.class);
                 startActivity(j);
             }

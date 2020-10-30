@@ -42,6 +42,7 @@
     <string name="TVTitulo">Título:</string>
     <string name="TVFotos">Fotos:</string>
     <string name="TVInstruccion">Ingrese su email y le enviaremos sus datos</string>
+    <string name="TVReclamos">Reclamos Totales:</string>
 
     <string name="ATEdificio">Edificio X</string>
     <string name="ATPiso">Piso Y</string>
@@ -51,6 +52,7 @@
 
     <string name="PTDescripcion">Descripción del problema...</string>
     <string name="BttnWindow">Generar Reclamo</string>
+    <string name="BttnReclamosEdif">Reclamosx</string>
     <string name="BttnCamera">Cámara</string>
     <string name="BttnAceptar">Aceptar</string>
 
