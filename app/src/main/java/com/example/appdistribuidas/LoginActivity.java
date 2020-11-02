@@ -10,7 +10,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.appdistribuidas.Models.Usuario;
+
 import java.util.HashMap;
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -26,12 +29,14 @@ public class LoginActivity extends AppCompatActivity {
 
     Retrofit retrofit;
     private RetrofitInterface retrofitInterface;
-    private String BASE_URL = "";
+    private String BASE_URL = "http://10.0.2.2:8090/api/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        getUsuarios();
 /*
         retrofit = new Retrofit.Builder()
                 .baseUrl(BASE_URL)
@@ -69,6 +74,41 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
+    private void getUsuarios(){
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        retrofitInterface = retrofit.create(RetrofitInterface.class);
+
+        Call<List<Usuario>> call = retrofitInterface.getUsuarios();
+
+        call.enqueue(new Callback<List<Usuario>>() {
+            @Override
+            public void onResponse(Call<List<Usuario>> call, Response<List<Usuario>> response) {
+                if(!response.isSuccessful()){
+                    //aca podemos controlar que hacer segun el response code.
+                    txtUser.setText("Codigo: "+ response.code());
+                    return;
+                }
+                List<Usuario> usuarioList = response.body();
+
+                for(Usuario usuario: usuarioList){
+                    String content = "";
+                    content += ".  "+ usuario.getNombre();
+                    txtUser.append(content);
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Usuario>> call, Throwable t) {
+                txtUser.setText(t.getMessage());
+            }
+        });
+
+    }
 /*
     private void handleSignupDialog() {
     }
@@ -78,7 +118,7 @@ public class LoginActivity extends AppCompatActivity {
         View view = getLayoutInflater().inflate(R.layout.activity_login, null);
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setView(view).show();
-        Button loginBtn = view.findViewById(R.id.btnAccept);
+        final Button loginBtn = view.findViewById(R.id.btnAccept);
         final EditText emailEdit = view.findViewById(R.id.txtUser);
         final EditText passwordEdit = view.findViewById(R.id.editTextTextPassword);
 
@@ -94,7 +134,16 @@ public class LoginActivity extends AppCompatActivity {
                 call.enqueue(new Callback<LoginResult>() {
                     @Override
                     public void onResponse(Call<LoginResult> call, Response<LoginResult> response) {
+                        if(response.code() == 200){
+                            LoginResult result = response.body();
+                            AlertDialog.Builder builder1 = new AlertDialog.Builder(LoginActivity.this);
+                            builder1.setTitle(result.getName());
+                            builder1.setMessage(result.getEmail());
 
+                            builder1.show();
+                        }else if(response.code()== 404){
+                            Toast.makeText(LoginActivity.this, "wrong", Toast.LENGTH_LONG).show();
+                        }
                     }
 
                     @Override
