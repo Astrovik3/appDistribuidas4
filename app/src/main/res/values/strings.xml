@@ -1,6 +1,33 @@
 <resources>
     <string name="app_name">App edificios</string>
 
+    <string name="TVEdificio">Edificio:</string>
+    <string name="TVPiso">Piso:</string>
+    <string name="TVNumero">Número:</string>
+    <string name="TVtextview">TextView</string>
+
+    <string name="TVRubro">Rubro:</string>
+    <string name="TVTitulo">Título:</string>
+    <string name="TVFotos">Fotos:</string>
+    <string name="TVInstruccion">Ingrese su email y le enviaremos sus datos</string>
+    <string name="TVReclamos">Reclamos Totales:</string>
+    <string name="ATEdificio">Edificio X</string>
+    <string name="ATPiso">Piso Y</string>
+    <string name="ATNumero">Número Z</string>
+
+    <string name="ATRubro">Rubro W</string>
+    <string name="ATTitulo">Título bla bla</string>
+    <string name="PTDescripcion">Descripción del problema...</string>
+    <string name="BttnWindow">Generar Nuevo</string>
+    <string name="BttnReclamosEdif">Todos Reclamos</string>
+    <string name="BttnMisReclamos">Mis Reclamos</string>
+
+    <string name="BttnCamera">Cámara</string>
+    <string name="BttnAceptar">Aceptar</string>
+    <string name="title_activity_main_activityjkyviy">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
     <string-array name="claims">
         <item>Claim 1</item>
         <item>Claim 2</item>
@@ -34,26 +61,5 @@
         <item>Cancelled</item>
         <item>Cancelled</item>
     </string-array>
-
-    <string name="TVEdificio">Edificio:</string>
-    <string name="TVPiso">Piso:</string>
-    <string name="TVNumero">Número:</string>
-    <string name="TVRubro">Rubro:</string>
-    <string name="TVTitulo">Título:</string>
-    <string name="TVFotos">Fotos:</string>
-    <string name="TVInstruccion">Ingrese su email y le enviaremos sus datos</string>
-    <string name="TVReclamos">Reclamos Totales:</string>
-
-    <string name="ATEdificio">Edificio X</string>
-    <string name="ATPiso">Piso Y</string>
-    <string name="ATNumero">Número Z</string>
-    <string name="ATRubro">Rubro W</string>
-    <string name="ATTitulo">Título bla bla</string>
-
-    <string name="PTDescripcion">Descripción del problema...</string>
-    <string name="BttnWindow">Generar Reclamo</string>
-    <string name="BttnReclamosEdif">Reclamosx</string>
-    <string name="BttnCamera">Cámara</string>
-    <string name="BttnAceptar">Aceptar</string>
 
 </resources>
