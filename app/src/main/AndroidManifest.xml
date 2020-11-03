@@ -13,6 +13,7 @@
         <activity android:name=".CameraActivity" />
         <activity android:name=".MainPageActivity" />
         <activity android:name=".EdifClaimsActivity" />
+        <activity android:name=".RecuperoPasswordActivity" />
         <activity android:name=".ClaimsActivity" />
         <activity android:name=".RecuperoPasswordActivity"/>
         <activity android:name=".LoginActivity">
