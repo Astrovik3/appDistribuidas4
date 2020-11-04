@@ -22,6 +22,7 @@ public class MainPageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_page);
 
+        //esto es parte para ver el despliegue de reportes que el usuario hizo...
         Resources res = getResources();
         listReclamosPropios = (RecyclerView) findViewById(R.id.listReclamosPropios);
         claims = res.getStringArray(R.array.claims);
@@ -33,17 +34,15 @@ public class MainPageActivity extends AppCompatActivity {
         listReclamosPropios.setLayoutManager(new LinearLayoutManager(this));
 
 
+        //los dos botones que nos llevan a hacer un nuevo reclamo o ver todos los del edificio...
         btnReclamosEdif = findViewById(R.id.btnClaimsEdif);
         btnReclamosEdif.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Intent: un vinculo entre actividades, origen -> destino
                 Intent i = new Intent(MainPageActivity.this, EdifClaimsActivity.class);
-                //i.putExtra("nombre",nombre);
                 startActivity(i);
             }
         });
-
         newWindow = findViewById(R.id.window1);
         newWindow.setOnClickListener(new View.OnClickListener() {
             @Override

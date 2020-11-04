@@ -15,7 +15,6 @@
         <activity android:name=".EdifClaimsActivity" />
         <activity android:name=".RecuperoPasswordActivity" />
         <activity android:name=".ClaimsActivity" />
-        <activity android:name=".RecuperoPasswordActivity"/>
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
