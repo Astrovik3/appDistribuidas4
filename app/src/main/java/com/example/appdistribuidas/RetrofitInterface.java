@@ -21,5 +21,5 @@ public interface RetrofitInterface {
     Call<List<Usuario>> getUsuarios();
 
     @POST("users/login")
-    Call<Void> login(@Body LoginRequest loginRequest);
+    Call<LoginResponse> login(@Body LoginRequest loginRequest);
 }

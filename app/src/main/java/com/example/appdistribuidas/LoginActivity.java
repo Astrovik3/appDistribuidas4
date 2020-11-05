@@ -91,20 +91,20 @@ public class LoginActivity extends AppCompatActivity {
         //Retrofit retrofit = RetrofitClientInstance.getRetrofitInstance();
         //final RetrofitInterface api = retrofit.create(RetrofitInterface.class);
         //Call<LoginResponse>
-        Call<Void> call = RetrofitClientInstance.getUserService().login(loginRequest) ;
-
-        call.enqueue(new Callback<Void>() {
+        Call<LoginResponse> call = RetrofitClientInstance.getUserService().login(loginRequest) ;
+        Log.d("aa",loginRequest.toString());
+        call.enqueue(new Callback<LoginResponse>() {
             @Override
-            public void onResponse(Call<Void> call, Response<Void> response) {
+            public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                 if(response.isSuccessful()){
-                    Toast.makeText(getApplicationContext(),"yes",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),"yes"+response.body().getMail(),Toast.LENGTH_LONG).show();
                 }else{
                     Toast.makeText(getApplicationContext(),"no",Toast.LENGTH_LONG).show();
                 }
             }
 
             @Override
-            public void onFailure(Call<Void> call, Throwable t) {
+            public void onFailure(Call<LoginResponse> call, Throwable t) {
                 Toast.makeText(getApplicationContext(),"naao"+t.getLocalizedMessage(),Toast.LENGTH_LONG).show();
                 Log.e("tag",t.getLocalizedMessage());
             }
