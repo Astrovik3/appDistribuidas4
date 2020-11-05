@@ -1,5 +1,7 @@
 package com.example.appdistribuidas;
 
+import com.example.appdistribuidas.Models.LoginRequest;
+import com.example.appdistribuidas.Models.LoginResponse;
 import com.example.appdistribuidas.Models.Usuario;
 
 import java.util.HashMap;
@@ -15,7 +17,9 @@ public interface RetrofitInterface {
     @POST("/login")
     Call<LoginResult> executeLogin(@Body HashMap<String, String> map);
 */
-    @GET("usuarios")
+    @GET("users")
     Call<List<Usuario>> getUsuarios();
 
+    @POST("users/login")
+    Call<Void> login(@Body LoginRequest loginRequest);
 }
